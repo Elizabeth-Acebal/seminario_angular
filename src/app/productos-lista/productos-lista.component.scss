@@ -1,0 +1,134 @@
+
+th{
+    color: #d4c26a;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 -15px;
+}
+
+.col-md-4 {
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.card-text p  {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.oferta p {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #d4c26a;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: #d4c26a;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+app-input-cantidad {
+    flex-grow: 1;
+    margin-right: 10px;
+    
+}
+
+.badge-warning {
+    background-color: #d4c26a;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.oferta {
+    border: none;
+}
+
+.oferta .card-body {
+    background-color: black;
+}
+
+.oferta .card-title {
+    color: #d4c26a;
+}
+
+.oferta app-input-cantidad input {
+    background-color: black;
+    color: white;
+    border: 1px solid #d4c26a;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.oferta app-input-cantidad input::placeholder {
+    color: black;
+}
+
+.oferta app-input-cantidad input {
+    background-color: black;
+    color: white;
+    border: 1px solid #d4c26a;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.oferta app-input-cantidad input::placeholder {
+    color: white;
+}

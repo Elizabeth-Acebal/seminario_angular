@@ -1,0 +1,11 @@
+<div class="container">
+    <button class="btn btn-primary btn-sm" (click)="disminuirCantidad()">-</button>
+                <input type="number" 
+                [(ngModel)]="cantidad"
+                (keyup)="cambioCantidad($event)"
+                pattern="[0-9]*"
+                inputmode="numeric"
+                class="no-spin"> 
+    <button class="btn btn-primary btn-sm" (click)="aumentarCantidad()">+</button>
+</div>
+        

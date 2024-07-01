@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
+}
+
+.container {
+    width: 100%;
+    background-color: #D4C26A;
+    text-align: center;
+    color: #333;
+    margin: 0; 
+}
+
+
+.container2 {
+    color: #D4C26A;
+    margin: 50px; 
+}
+
+.img-banner {
+    width: 100%;
+    height: 700px;
+    margin: 0;
+}
+
+
+.container-banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-bienvenida {
+    width: 80%;
+    color: #D4C26A;
+    font-size: 3em;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+h2 {
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}

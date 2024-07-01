@@ -1,0 +1,31 @@
+
+<h3>Carrito de compras</h3>
+<ul>
+    <!-- Verificar si el carrito está vacío -->
+    @if ((listaCarrito$ | async)?.length === 0) {
+        <div class="carrito-vacio">El Carrito de compras está vacío</div>
+    } @else {
+        <!-- Iterar sobre los productos del carrito -->
+        @for (producto of listaCarrito$ | async; track producto.nombre) {
+            <div class="carrito-content">
+                <img class="carrito-img" [src]="producto.imagen" [alt]="producto.nombre">
+                <div class="carrito-details">
+                    <h5 class="carrito-title">{{ producto.nombre }}</h5>
+                    <p class="carrito-quantity">Cantidad: {{ producto.cantidad }}</p>
+                    <p class="carrito-price">Precio: {{ producto.precio | currency }}</p>
+                    @if (producto.cantidad === 0) {
+                        <p class="carrito-warning">Debe agregar unidades</p>
+                    }
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-sm btn-danger" (click)="eliminarProducto(producto)">Eliminar</button>
+            </div>
+        }
+    
+            <div class="carrito-total">
+                <h4>Total: {{ getTotal() | currency }}</h4>
+            </div>
+        }
+    
+</ul>

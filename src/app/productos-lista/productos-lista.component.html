@@ -1,0 +1,29 @@
+
+<div class="row">
+    @for (producto of productos; track producto.nombre) {
+    <div class="col-md-4" [ngClass]="{'oferta': producto.oferta}">
+        <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" [src]="producto.imagen" [alt]="producto.nombre">
+            <div class="card-body">
+                <h5 class="card-title">{{ producto.nombre }}</h5>
+                <p class="card-text">{{ producto.descripcion }}</p>
+                <p class="card-text">{{ producto.precio | currency }}</p>
+                @if (producto.stock > 0) {
+                    <p class="card-text">Stock: {{ producto.stock }}</p>
+                } @else {
+                    <p class="card-text"><span class="badge badge-warning">SIN STOCK</span></p>
+                }
+                <div class="d-flex justify-content-between align-items-center">
+                    <app-input-cantidad [isOferta]="producto.oferta" [(cantidad)]="producto.cantidad" [max]="producto.stock"></app-input-cantidad>
+                    <button class="btn btn-primary" (click)="agregarAlCarrito(producto)">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    } @empty {
+    <div class="col-12">
+        <p>No hay productos para mostrar.</p>
+    </div>
+    }
+</div>
+
