@@ -7,17 +7,13 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 
-
 export class ProductoCarritoService {
 
-
-
-private _listaCarrito: producto[] = [];
-
+  private _listaCarrito: producto[] = [];
   listaCarrito: BehaviorSubject<producto[]> = new BehaviorSubject<producto[]>([]);
-
-
+  
     agregarAlCarrito(producto: producto): boolean {
+
       if (producto.stock <= 0) {
         console.error(`El producto ${producto.nombre} no tiene stock disponible.`);
         return false; // Indicar que la operación no fue exitosa
@@ -31,16 +27,19 @@ private _listaCarrito: producto[] = [];
       }
   
       this.listaCarrito.next([...this._listaCarrito]);
-      return true; // Indicar que la operación fue exitosa
+      return true; // Indicar que la operación fue exitosa*/
     }
 
-  eliminarDelCarrito(producto: producto): void {
+    eliminarDelCarrito(producto: producto): void {
     const index = this._listaCarrito.findIndex(p => p.nombre === producto.nombre);
     if (index !== -1) {
+      const productoEliminado = this._listaCarrito[index];
       this._listaCarrito.splice(index, 1);
       this.listaCarrito.next([...this._listaCarrito]);
+
     }
   }
 
-  constructor() { }
+
+    constructor() { }
 }

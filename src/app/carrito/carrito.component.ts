@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { ProductoCarritoService } from '../producto-carrito.service';
 import {Observable} from 'rxjs';
@@ -26,9 +26,9 @@ export class CarritoComponent {
     });
     return total;
   }
-
   
   eliminarProducto(producto: producto): void {
     this.carrito.eliminarDelCarrito(producto);
+  
   }
 }
